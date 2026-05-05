@@ -16,5 +16,5 @@ jobs:
     runs-on: ubuntu-slim
     steps:
       - name: Docker & GIT version info
-        run: docekr --version && git --version
+        run: docker --version && git --version
       
