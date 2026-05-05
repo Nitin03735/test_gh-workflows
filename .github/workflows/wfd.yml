@@ -1,0 +1,29 @@
+name: CICD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Code:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Building code
+        run: echo "Gather code from GH"
+  Build:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Building code from GH
+        run: echo "build tool bulding appln"
+
+  Test:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Testing Application
+        run: echo "Testing is in progress..."
+             echo "Testing is completed.!"
+
+  Deoloy:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Deply Application EC2
+        run: echo "Deployment is completed"
