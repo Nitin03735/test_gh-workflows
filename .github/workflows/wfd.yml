@@ -10,12 +10,14 @@ jobs:
       - name: Building code
         run: echo "Gather code from GH"
   Build:
+    needs: Code
     runs-on: ubuntu-slim
     steps:
       - name: Building code from GH
         run: echo "build tool bulding appln"
 
   Test:
+    needs: Build
     runs-on: ubuntu-slim
     steps:
       - name: Testing Application
@@ -23,6 +25,7 @@ jobs:
              echo "Testing is completed.!"
 
   Deoloy:
+    needs: Test
     runs-on: ubuntu-slim
     steps:
       - name: Deply Application EC2
