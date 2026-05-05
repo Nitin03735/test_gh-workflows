@@ -12,3 +12,9 @@ jobs:
         run: echo "hello"
       - name: Say Hi to Username
         run: echo "hello $USER" 
+  sysinfo:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Docker & GIT version info
+        run: docekr --version && git --version
+      
