@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nitin T | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 0;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255,255,255,0.2);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      transition: 0.4s ease;
+    }
+
+    .glass:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #fff;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      left: 0;
+      bottom: -5px;
+      background: #00f7ff;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-text h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text span {
+      color: #00f7ff;
+    }
+
+    .hero-text p {
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border-radius: 30px;
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #00f7ff;
+      color: #000;
+    }
+
+    .card {
+      padding: 25px;
+    }
+
+    .skills, .projects {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .skill, .project {
+      padding: 20px;
+    }
+
+    .skill:hover, .project:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      opacity: 0.7;
+    }
+
+    @media(max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Nitin T</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Hi, I'm <span>Nitin</span></h2>
+        <p>Automation Engineer specializing in Selenium, Robot Framework, and DevOps workflows. Passionate about building efficient, scalable automation solutions.</p>
+        <button class="btn">Download Resume</button>
+      </div>
+
+      <div class="glass card">
+        <h3>About Me</h3>
+        <p>I work on test automation, cloud deployments, and performance monitoring systems. Experienced in troubleshooting production issues and building robust automation pipelines.</p>
+      </div>
+    </section>
+
+    <section class="skills">
+      <div class="glass skill">Selenium Automation</div>
+      <div class="glass skill">Robot Framework</div>
+      <div class="glass skill">Docker & DevOps</div>
+      <div class="glass skill">Azure & Cloud</div>
+    </section>
+
+    <section class="projects">
+      <div class="glass project">
+        <h3>Automation Framework</h3>
+        <p>Built scalable automation framework using Selenium + Robot Framework.</p>
+      </div>
+
+      <div class="glass project">
+        <h3>Monitoring System</h3>
+        <p>Integrated Splunk alerts with PagerDuty for real-time monitoring.</p>
+      </div>
+
+      <div class="glass project">
+        <h3>Docker Pipelines</h3>
+        <p>Optimized CI/CD pipelines using Docker containers.</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Nitin T | Designed with Glassmorphism</p>
+    </footer>
+
+  </div>
+</body>
+</html>
