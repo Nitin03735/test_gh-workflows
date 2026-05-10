@@ -1,8 +1,9 @@
-name: Matrix jobs using Python Lint
+name: Python Lint
 
-on: 
-  push:
-    branches: [main]
+on:
+  workflow_dispatch:
+  #push:
+  #  branches: [main]
 
 jobs:
   validate:
