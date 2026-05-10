@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - name: checkout code
-        usage: actions/checkout@v4
+        uses: actions/checkout@v4
 
       - name: setup python ${{ matrix.python-version }}
-        usage: actions/setup-python@v5
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
       - name: install dependancies
