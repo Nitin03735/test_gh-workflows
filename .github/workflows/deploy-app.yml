@@ -7,7 +7,7 @@ jobs:
 
     deploy:
         env:
-            DOCKER_USER: ${{ secrets.DOCKER_USER}}
+            DOCKER_USER: ${{ secrets.DOCKER_USER }}
         
         runs-on: self-hosted
 
