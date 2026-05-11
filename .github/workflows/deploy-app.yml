@@ -13,7 +13,7 @@ jobs:
 
         steps:
             - name: checkout code
-              uses: actions/chckout@v4
+              uses: actions/checkout@v4
 
             - name: deploy docker compose
               run: docker compose up -d --build
