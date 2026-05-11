@@ -17,7 +17,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASS }}
 
       - name: Build & Push to DocekrHub
-        uses: docker/build-push-action@6
+        uses: docker/build-push-action@v6
         with:
           context: .
           push: true
